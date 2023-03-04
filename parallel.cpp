@@ -241,7 +241,7 @@ namespace parallel
                     std::vector<Preform> preforms(req.size(), Preform(preform_size));
                     std::vector<int> slots(req.size(), -1);
 
-                    fill_firstn(pool, preforms, slots, req, 0, max_size);
+                    fill_firstn(pool, preforms, slots, req, 0, preprocessing_amount + 1);
 
                     #pragma omp critical (in_process)
                     in_process = false;

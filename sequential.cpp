@@ -61,6 +61,8 @@ namespace sequential
         res = std::vector<Preform>(preforms);
         for (int i = 0; i < requirements.size(); ++i)
             res[i].cut(requirements[i]);
+            int x;
+            x = 2*2*2;
 
         fill_rec(res, preforms, slots, requirements, 0);
     }

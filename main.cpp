@@ -63,23 +63,23 @@ void time_results(int req_len, int preform_size, int preprocessing_amount, int r
         std::cout << "\nParallel algorithm calculated result in average of " << std::fixed
                   << avg(sum2, repeats) << " seconds\n\n";
 
-//        std::cout << "\nLast sequential result:\n\n";
-//        for (int i = 0; i < res1.size(); ++i)
-//        {
-//            std::cout << "Preform " << i << ": " << preform_size - res1[i].used() << " unused. Cuts: ";
-//            for (unsigned cut: res1[i].get_cuts())
-//                std::cout << cut << ' ';
-//            std::cout << std::endl;
-//        }
+        std::cout << "\nLast sequential result:\n\n";
+        for (int i = 0; i < res1.size(); ++i)
+        {
+            std::cout << "Preform " << i << ": " << preform_size - res1[i].used() << " unused. Cuts: ";
+            for (unsigned cut: res1[i].get_cuts())
+                std::cout << cut << ' ';
+            std::cout << std::endl;
+        }
 
-//        std::cout << "\nLast parallel result:\n\n";
-//        for (int i = 0; i < res2.size(); ++i)
-//        {
-//            std::cout << "Preform " << i << ": " << preform_size - res2[i].used() << " unused. Cuts: ";
-//            for (unsigned cut: res2[i].get_cuts())
-//                std::cout << cut << ' ';
-//            std::cout << std::endl;
-//        }
+        std::cout << "\nLast parallel result:\n\n";
+        for (int i = 0; i < res2.size(); ++i)
+        {
+            std::cout << "Preform " << i << ": " << preform_size - res2[i].used() << " unused. Cuts: ";
+            for (unsigned cut: res2[i].get_cuts())
+                std::cout << cut << ' ';
+            std::cout << std::endl;
+        }
     }
 }
 
